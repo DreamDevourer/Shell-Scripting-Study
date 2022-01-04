@@ -6,8 +6,6 @@
   <a href="./LICENSE">License</a>
 </p>
 
-<img src="./sample.svg" alt="Sample password generator script study." width="100%" height="auto">
-
 <p>In this repository I study the practical application of:</p>
 <ul>
   <li>Shell built-in functions</li>
