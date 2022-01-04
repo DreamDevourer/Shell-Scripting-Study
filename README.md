@@ -45,3 +45,158 @@
 ## 💡 Useful Snippets and study pieces
 
 <p>Here are some useful snippets to use daily for boosting code efficiency. Every single snippet is coming from a study script that I made from this repository.</p>
+
+<h3>User Inputs</h3>
+<p>A mandatory thing these days, give user the choice and input inside scripts.</p>
+
+```bash
+#! /bin/bash
+
+# Always use $(()) for making calculations
+
+read -p "Enter your name: " NAME
+
+echo "Welcome $NAME!"
+
+```
+
+<h3>Arithmetic Operation</h3>
+<p>Useful for calculating variables, converting from String to Int or Float types.</p>
+
+```bash
+#! /bin/bash
+
+# Always use $(()) for making calculations
+
+read -p "Enter the circle's radius in square meters: " CIRCLE_RAY
+
+CIRCLE_AREA=$((CIRCLE_RAY*CIRCLE_RAY))
+CIRCLE_FINAL=$((CIRCLE_AREA*3))
+
+echo "$CIRCLE_FINAL is the circle's radius in square meters."
+
+```
+
+<h3>If Statement</h3>
+<p>Important logical operation present in every programming language and problem solving scripts.</p>
+
+```bash
+#! /bin/bash
+
+if [ "$NAME" == "Nick" ]
+then
+  echo "Your name is $NAME"
+elif [ "$NAME" == "Lisa" ]
+then  
+  echo "Your name is $NAME"
+else 
+  echo "Your name is NOT Nick or Lisa"
+fi
+
+```
+
+<h3>Comparison Statement</h3>
+<p>Comparing values between variables is a need for different logical reasons.</p>
+
+```bash
+#! /bin/bash
+
+NUM_ONE=31
+NUM_TWO=5
+if [ "$NUM_ONE" -gt "$NUM_TWO" ]
+then
+  echo "$NUM_ONE is greater than $NUM_TWO"
+else
+  echo "$NUM_ONE is less than $NUM_TWO"
+fi
+
+######## COMPARISON TABLE
+# val1 -eq val2 Returns true if the values are equal
+# val1 -ne val2 Returns true if the values are not equal
+# val1 -gt val2 Returns true if val1 is greater than val2
+# val1 -ge val2 Returns true if val1 is greater than or equal to val2
+# val1 -lt val2 Returns true if val1 is less than val2
+# val1 -le val2 Returns true if val1 is less than or equal to val2
+########
+
+```
+
+<h3>File Comparison Conditions</h3>
+<p>For shell script, working with system files is a daily common task, so checking and comparing files is one of the first steps to have in place.</p>
+
+```bash
+#! /bin/bash
+
+FILE="test.md"
+if [ -e "$FILE" ]
+then
+  echo "$FILE exists"
+else
+  echo "$FILE does NOT exist"
+fi
+
+######## CONDITION TABLE
+# -d file   True if the file is a directory
+# -e file   True if the file exists (note that this is not particularly portable, thus -f is generally used)
+# -f file   True if the provided string is a file
+# -g file   True if the group id is set on a file
+# -r file   True if the file is readable
+# -s file   True if the file has a non-zero size
+# -u    True if the user id is set on a file
+# -w    True if the file is writable
+# -x    True if the file is an executable
+########
+
+```
+
+<h3>For Loop</h3>
+<p>Making repetitions with for loops, in this case utilizing range (1, TOTAL).</p>
+
+```bash
+#! /bin/bash
+
+read -p "See the projection until: (in years -> ex: 5) " INVESTMENT_UNTIL
+
+for EACH_YEAR_INCOME in $(seq 1 $INVESTMENT_UNTIL)
+  do
+    TOT_INC=$((TOTAL_INCOME * EACH_YEAR_INCOME))
+    echo "In $EACH_YEAR_INCOME year(s) you will have $TOT_INC $WHAT_CURRENCY"
+done
+
+```
+
+<h3>While Loop</h3>
+<p>Like for loops, this is an important repetition condition that automates processes. In this case, the while loop reads through a file line by line.</p>
+
+```bash
+#! /bin/bash
+
+LINE=1
+while read -r CURRENT_LINE
+  do
+    echo "$LINE: $CURRENT_LINE"
+    ((LINE++))
+done < "./test.md"
+
+```
+
+<h3>Function Usage</h3>
+<p>Functions are great for separating the code into blocks, organizing and automating better.</p>
+
+```bash
+#! /bin/bash
+
+# SIMPLE FUNCTION
+function sayGenericHello() {
+  echo "Hello World"
+}
+sayGenericHello
+
+# FUNCTION WITH PARAMETERS
+function sayMyNameAge() {
+  echo "Hello, I am $1 and I am $2"
+}
+
+sayMyNameAge "Nick" "21"
+
+```
