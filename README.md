@@ -95,6 +95,29 @@ fi
 
 ```
 
+<h3>Case Statement</h3>
+<p>You can use multiple if...elif statements to perform a multiway branch. However, this is not always the best solution, especially when all of the branches depend on the value of a single variable.
+
+Shell supports case...esac statement which handles exactly this situation, and it does so more efficiently than repeated if...elif statements.</p>
+
+```bash
+#! /bin/bash
+
+read -p "Do you want to install it? Y/N " INSTALL
+case "$INSTALL" in 
+  [yY] | [yY][eE][sS])
+    echo "Installing..."
+    ;;
+  [nN] | [nN][oO])
+    echo "Aborting operation..."
+    ;;
+  *)
+    echo "Please enter y/yes or n/no"
+    ;;
+esac
+
+```
+
 <h3>Comparison Statement</h3>
 <p>Comparing values between variables is a need for different logical reasons.</p>
 
