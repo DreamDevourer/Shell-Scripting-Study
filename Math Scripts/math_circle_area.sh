@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 read -p "Enter the circle's radius in square meters: " CIRCLE_RAY
 

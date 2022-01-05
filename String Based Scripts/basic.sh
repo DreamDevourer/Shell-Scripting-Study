@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 echo "Woohoo! First Bash Script in my GitHub!"\n
 

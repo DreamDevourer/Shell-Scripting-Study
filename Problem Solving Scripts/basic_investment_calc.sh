@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 read -p "What currency are you using? (USD/BRL) " WHAT_CURRENCY
 read -p "What is the income percentage per year? " INCOME_PER

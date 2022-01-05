@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 # 24785089
 read -p "Type the minutes that you want to convert to yaers: " MINUTES

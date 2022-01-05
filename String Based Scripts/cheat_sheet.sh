@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 # ECHO COMMAND
 # echo Hello World!
