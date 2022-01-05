@@ -6,6 +6,8 @@
   <a href="./LICENSE">License</a>
 </p>
 
+<img src="./sample.svg" alt="Shell script sample made inside this repository.">
+
 <p>In this repository I study the practical application of:</p>
 <ul>
   <li>Shell built-in functions</li>
